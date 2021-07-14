@@ -25,7 +25,7 @@ class Student(Base):
 
 
 # once table is done we have to migrate to database
-# Base.metadata.create_all(engine)
+Base.metadata.create_all(engine)
 
 
 # instance of Student class
@@ -45,7 +45,7 @@ session.add_all([student1, student2, student3])
 session.commit()
 
 
-# Get the data form database
+# Get the data from database
 
 students = session.query(Student)
 
